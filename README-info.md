@@ -5,9 +5,9 @@
 <h2>Marcklen Monteiro Guimarães</h2>
 <p>Trilha BackEnd</p>
 <hr />
-<h2>Coloque aqui o seu nome</h2>
-<p>coloque sua trilha</p>
+<h2>Luan de Carvalho Lima</h2>
+<p>Trilha FrontEnd</p>
 <hr />
-<h2>Coloque aqui o seu nome</h2>
-<p>coloque sua trilha</p>
+<h2>Mariana Machado Costa</h2>
+<p>Trilha BackEnd</p>
 <hr />
