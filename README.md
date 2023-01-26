@@ -92,5 +92,5 @@ O processo de reversão deve ser usado quando você quer aplicar o inverso do co
 <li>https://www.atlassian.com/br/git/tutorials/undoing-changes/git-revert#:~:text=O%20comando%20git%20revert%20%C3%A9,do%20branch%20para%20commits%20especificados</li>
 <hr />
 
-Made by ❤️ by [Luan Lima](https://github.com/limaluan), [Mariana Machado](https://github.com/marimaccos) and [Marcklen](https://github.com/marcklen).
+Made with ❤️ by [Luan Lima](https://github.com/limaluan), [Mariana Machado](https://github.com/marimaccos) and [Marcklen](https://github.com/marcklen).
 </div>
