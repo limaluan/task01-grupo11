@@ -24,6 +24,44 @@ Ao fazer o rebase, podemos movê-la com o comando <code  style="color:red">git r
 </p>
 <br/>
 
+<h1 style="color:blue">Git Cherry Pick</h1>
+<hr />
+<h2>Funcionamento</h2>
+<p>O <code>git cherry-pick</code> é um comando do Git que permite escolher diferentes commits para carregar no branch selecionado. Ou seja, é a ação de pegar um commit de uma branch e aplicar em outra.</p>
+<p><code>git cherry-pick</code> pode ser útil para desfazer mudanças, mas nem sempre é uma boa prática, pois pode causar commits duplicados. Esse comando não deve substituir o <code>git merge</code> e <code>git rebase</code>.</p>
+<hr />
+<h2>Sintaxe</h2>
+Pega apenas um commit:<br/>
+<code>git cherry-pick "commitID"</code><br/>
+Pega um intervalo de commits:<br/>
+<code>git cherry-pick 1..3 //Pega o commit 2 e 3 ignorando o 1</code><br/>
+<code>git cherry-pick 1^..3  //Pega todos os commits do 1-3</code><br/>
+Pega todos os commits da branch:<br/>
+<code>git cherry-pick "nomeBranch"</code><br/>
+<hr />
+<h2>Aplicação</h2>
+<p>O <code>git cherry-pick</code> pode ser aplicado em um repositório como o seguinte:
+
+a - b - c - d (main)<br/>
+e - f - g  (feature)<br/>
+
+Nesse caso se deseja usar o commit "f" na branch main. Primeiro é preciso estar na branch main:<br/>
+<code>git checkout main</code><br/>
+Então, executamos o cherry-pick com o seguinte comando:<br/>
+<code>git cherry-pick f</code><br/>
+Após a execução, o histórico do Git vai se parecer com:<br/>
+a - b - c - d - f (main)<br/>
+e - f - g  (feature)<br/>
+O commit f foi colocado na ramificação principal com sucesso.
+</p>
+<hr />
+<h1 style="color:blue">Referências</h1>
+<li>https://git-scm.com/doc</li>
+<li>https://www.atlassian.com/br/git/tutorials/cherry-pick#:~:text=O%20git%20cherry-pick%20%C3%A9,ser%20%C3%BAtil%20para%20desfazer%20altera%C3%A7%C3%B5es.</li>
+<li>https://blog.geekhunter.com.br/git-cherry-pick-o-que-e-quando-usar/</li>
+<li>https://coodesh.com/blog/candidates/aprenda-o-que-e-cherry-pick-do-git-e-como-aplicar-para-agilizar-seus-projetos/</li>
+<hr />
+
 <h1 style="color:blue">Git Revert</h1>
 <hr />
 <h2>Funcionamento</h2>
@@ -54,4 +92,15 @@ O processo de reversão deve ser usado quando você quer aplicar o inverso do co
 <h2>Aplicação</h2>
 <p>A combinação por squash permite que você combine vários commits no histórico do seu branch em um único commit. Isso pode ajudar a manter a história do seu repositório mais legível e compreensível.</p>
 <hr /><br/>
+
+<h1 style="color:blue">Referências</h1>
+<a>https://git-scm.com/doc</a>
+<a>https://www.atlassian.com/br/git/tutorials/cherry-pick#:~:text=O%20git%20cherry-pick%20%C3%A9,ser%20%C3%BAtil%20para%20desfazer%20altera%C3%A7%C3%B5es.</a>
+<a>https://blog.geekhunter.com.br/git-cherry-pick-o-que-e-quando-usar/</a>
+<a>https://coodesh.com/blog/candidates/aprenda-o-que-e-cherry-pick-do-git-e-como-aplicar-para-agilizar-seus-projetos/</a>
+<a>https://blog.betrybe.com/git/git-rebase/</a>
+<a>https://www.freecodecamp.org/portuguese/news/o-guia-definitivo-para-git-merge-e-git-rebase/</a>
+<a>https://blog.betrybe.com/git/git-rebase/</li>
+<a>https://www.atlassian.com/br/git/tutorials/undoing-changes/git-revert#:~:text=O%20comando%20git%20revert%20%C3%A9,do%20branch%20para%20commits%20especificados</a>
+<hr />
 </div>
